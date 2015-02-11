@@ -1,4 +1,4 @@
-(skariel) IMO, initially, the TetGen api should follow the C-Api very closely (whatever the C functions require as inut, nothing more). Textures, materials, etc. are all subproperties of the geometry. A higher level API should give comfortable types and methods to deal with geometry (vertices, faces and normals) then these can have an aditional field `data` or `info` which is parametric. This would minimaly couple Tetgen with the libs that use it. I guess I'm in the one generic meshtype to rule them all :)
+(skariel) IMO, initially, the TetGen api should follow the C-Api very closely (whatever the C functions require as input, nothing more). Textures, materials, etc. are all subproperties of the geometry. A higher level API should give comfortable types and methods to deal with geometry (vertices, faces and normals) then these can have an aditional field `data` or `info` which is parametric. This would minimaly couple Tetgen with the libs that use it. I guess I'm in the one generic meshtype to rule them all :)
 
 
 ### How should a generic mesh typ look like?
