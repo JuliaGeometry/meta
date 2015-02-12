@@ -81,7 +81,7 @@ msh = Mesh(verts, faces, normals, color)
 msh[:face] #indexing with lowercase type name, without the parameters
   
 ```
-Nice thing about this design is, that you can define convert functions, which fill in standard values.
+Nice thing about this design is, that you can state precicely what kind of mesh you need, and then define convert functions which transform the mesh into what you need:
 ```Julia
 msh = Mesh(vertex, faces{4,T})
 convert(Mesh{Face, Normal, Vertex}, mesh)  # -> generate normals
