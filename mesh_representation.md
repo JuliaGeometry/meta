@@ -81,6 +81,14 @@ msh = Mesh(verts, faces, normals, color)
 msh[:face] #indexing with lowercase type name, without the parameters
   
 ```
+Nice thing about this design is, that you can define convert functions, which fill in standard values.
+```Julia
+msh = Mesh(vertex, faces{4,T})
+convert(Mesh{Face, Normal, Vertex}, mesh) 
+convert(Mesh{Triangle, Normal, Vertex}, mesh) #-> triangulates mesh
+convert(Mesh{Facem Normal, UV}, mesh) #--> fills in default
+```
+Question: Is it justified to have all this sorting of parameters and forcing the user to use the right sorting?
 
 Considering one indexing vs zero indexing,one solution could be, to have the index data always start at zero, 
 and define indexing methods into julia arrays, which uses the `IndexOffset` offset from the face. 
