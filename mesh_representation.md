@@ -86,7 +86,7 @@ Nice thing about this design is, that you can state precicely what kind of mesh 
 msh = Mesh(vertex, faces{4,T})
 convert(Mesh{Face, Normal, Vertex}, mesh)  # -> generate normals
 convert(Mesh{Triangle, Normal, Vertex}, mesh) #-> triangulates mesh
-convert(Mesh{Facem Normal, UV}, mesh) #--> fills in default
+convert(Mesh{Face, Normal, UV}, mesh) #--> fills in default
 ```
 Question: Is it justified to have all this sorting of parameters and forcing the user to use the right sorting?
 
